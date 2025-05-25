@@ -1,8 +1,5 @@
-
-# Lista de FIIs para auditar
 tickers: [VILG11, BTLG11, HSLG11, GARE11, CPTS11, RVBI11, RZTR11,
           HSML11, XPLG11, VISC11, RZAK11, DEVA11]
 
-# Telegram (obrigatório só se quiser alerta)
-telegram_token: "COLE_SEU_TOKEN_AQUI"
-telegram_chat_id: "COLE_SEU_CHATID"
+telegram_token: "7455490350:AAgr6NjFwrXFwkp-mq1HF2NBV-5PVXGfYY0"
+telegram_chat_id: "6923018960"
