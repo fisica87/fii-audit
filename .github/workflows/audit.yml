@@ -1,0 +1,32 @@
+name: FII Full-Audit
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 11 5 * *'    # 08:00 America/Santarem todo dia 5
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          pip install -r requirements.txt
+          sudo apt-get update && sudo apt-get install -y default-jre
+
+      - name: Run audit
+        run: python run_audit.py
+
+      - name: Upload artefato
+        uses: actions/upload-artifact@v4
+        with:
+          name: fii_audit_db
+          path: fii_audit.db
