@@ -1,0 +1,5 @@
+pdfplumber
+tabula-py
+pandas
+requests
+PyYAML
